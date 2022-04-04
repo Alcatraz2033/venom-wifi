@@ -28,7 +28,7 @@ sudo handshake.sh
 Selecciona la interfaz de red que utilizaras para el ataque "En este caso utilizo una antena Alfa rompe muros", automáticamente se eliminarán procesos que
 puedan interferir con el ataque.
 
-<p align="center">
+<p align="left">
 	<img src="https://i.imgur.com/Du9qNBq.png" width="60%" height="60%" align="">
 </p>
 
