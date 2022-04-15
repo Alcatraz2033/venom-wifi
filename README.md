@@ -30,7 +30,7 @@ puedan interferir con el ataque.
 ## Obterner Handshake
 
 Al iniciar se abrira una terminal de xterm y mostrará gradualmente las redes wifi disponibles, una vez veas la red que vas a atacar, da clic sobre la
-terminal xterm y luego preciona ctrl + C. La detección de red finalizará y podras cerrar la terminal dando clic en la opcion de cerrar "X".
+terminal xterm y luego preciona ctrl + C. La detección de red finalizará y podras cerrar la terminal dando clic en el botón cerrar "X".
 Despues de aparecerá el listado de redes disponibles, selecionas la que gustes y empieza el ataque.
 
 <p align="center">
