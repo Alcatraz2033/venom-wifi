@@ -31,7 +31,7 @@ puedan interferir con el ataque.
 
 Al iniciar se abrira una terminal de xterm y mostrará gradualmente las redes wifi disponibles, una vez veas la red que vas a atacar, da clic sobre la
 terminal xterm y luego preciona ctrl + C. La detección de red finalizará y podras cerrar la terminal dando clic en el botón cerrar "X".
-Despues de aparecerá el listado de redes disponibles, selecionas la que gustes y empieza el ataque.
+Despues aparecerá el listado de redes disponibles, selecionas la que gustes y empieza el ataque.
 
 <p align="center">
 	<img src="https://i.imgur.com/zywUH2z.png" width="100%" height="100%" align="">
