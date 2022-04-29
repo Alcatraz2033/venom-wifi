@@ -15,9 +15,9 @@ fi
 function ctrl_c(){
     echo -e "${RED}\n[!] Saliendo...${END}"
     rm redes* captura-01.csv captura-01.kismet.csv captura-01.kismet.netxml captura-01.log.csv mac_users.txt  2>/dev/null 
-	mv captura-01.cap $red_name.cap &>/dev/null
-	mv $red_name.cap capturas  &>/dev/null
-	rm $red_name.cap &>/dev/null 
+	mv captura-01.cap "$red_name.cap" &>/dev/null
+	mv "$red_name.cap" capturas  &>/dev/null
+	rm "$red_name.cap" &>/dev/null 
     mon=$(networkctl 2>/dev/null |  awk '{print $(NF-3)}' 2>/dev/null)
     mon_comprobation=$(echo $mon | grep "mon")
     if [ $? == "0" ];then
@@ -94,7 +94,7 @@ clear
 lan=$(networkctl 2>/dev/null | grep "mon" | awk '{print $(NF-3)}')
 xterm -hold -e "airodump-ng $lan -w redes"
 echo -e "\n${WHITE}[+] ${GREEN}Redes wifi encontradas, seleccione una${END}\n"
-eleccion=$(awk -F',' '{print $14}' redes-01.csv | sed 's/ESSID//' | tr -s '\n' | sort | sed '/^\s*$/d' | sed 's/ /\//g')
+eleccion=$(awk -F',' '{print $14}' redes-01.csv | sed 's/ESSID//' | tr -s '\n' | sort | sed '/^\s*$/d' | sed 's/ //' | sed 's/ /\//g')
 
 select optiones in $eleccion;do
     red_name=$(echo $optiones | sed 's/\// /g')
