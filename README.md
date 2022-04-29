@@ -13,7 +13,6 @@ Clonar el repositorio y cambiar los permisos
 ```markdown
 git clone https://github.com/Alcatraz2033/auto-handshake.git
 cd auto-handshake
-mkdir capturas
 chmod +x handshake.sh
 sudo ./handshake.sh
 ```
