@@ -71,6 +71,10 @@ clear
 banner
 cheker
 
+if [ ! -d "capturas" ];then
+	mkdir capturas
+fi	
+
 interf=$(networkctl 2>/dev/null | awk '/unmanaged/{print $2}')
 echo -e "\n${WHITE}[+] ${GREEN}Escoja la interfaz a poner en modo monitor"
 echo ${WHITE}; select option in $interf;do
