@@ -88,7 +88,7 @@ echo ${WHITE}; select option in $interf;do
 done 
 
 echo -e "\n${WHITE}[+] ${GREEN}Listando redes WIFI${END}"
-sleep 2
+sleep 1
 
 clear 
 lan=$(networkctl 2>/dev/null | grep "mon" | awk '{print $(NF-3)}')
