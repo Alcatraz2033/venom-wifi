@@ -58,12 +58,12 @@ function cheker(){
 	which aircrack-ng &>/dev/null
 	if [ $? -ne "0" ];then
 		echo -e "\n${CYAN}[+] Instalando aircrack-ng...${endColour}"
-		sudo apt install aircrack-ng &>/dev/null
+		sudo apt install aircrack-ng -y &>/dev/null
 	fi
 	which xterm &>/dev/null
 	if [ $? -ne "0" ];then
 		echo -e "\n${CYAN}[+] Instalando xterm...${endColour}"
-		sudo apt install xterm &>/dev/null
+		sudo apt install xterm -y &>/dev/null
 	fi 
 }
 
