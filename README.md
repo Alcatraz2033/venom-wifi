@@ -23,7 +23,7 @@ Selecciona la interfaz de red que utilizaras para el ataque "En este caso utiliz
 puedan interferir con el ataque.
 
 <p align="left">
-	<img src="https://i.imgur.com/Du9qNBq.png" width="60%" height="60%" align="">
+	<img src="https://i.imgur.com/Wxqvufp.png" width="60%" height="60%" align="">
 </p>
 
 ## Obterner Handshake
@@ -33,7 +33,7 @@ terminal xterm y luego preciona ctrl + C. La detección de red finalizará y pod
 Despues aparecerá el listado de redes disponibles, selecionas la que gustes y empieza el ataque.
 
 <p align="center">
-	<img src="https://i.imgur.com/zywUH2z.png" width="100%" height="100%" align="">
+	<img src="https://i.imgur.com/nLhsEML.png" width="100%" height="100%" align="">
 </p>
 
 ## Tumbar la Red
@@ -43,5 +43,5 @@ Para detener el ataque preciona ctrl + C en la terminal principal.
 
 
 <p align="center">
-	<img src="https://i.imgur.com/H33jYTf.png" width="100%" height="100%" align="">
+	<img src="https://i.imgur.com/jQ3srbW.png" width="100%" height="100%" align="">
 </p>
