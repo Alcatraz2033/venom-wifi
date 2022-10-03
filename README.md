@@ -36,6 +36,13 @@ Despues aparecerá el listado de redes disponibles, selecionas la que gustes y e
 	<img src="https://i.imgur.com/nLhsEML.png" width="100%" height="100%" align="">
 </p>
 
+## Resultado Final
+
+Una vez obtenido el handshake, el programa automaticamente se serrará y guardará el archivo.cap en la carpeta capturas con el nombre de la red comprometida
+<p align="center">
+	<img src="https://i.imgur.com/HUN7fOR.png" width="100%" height="100%" align="">
+</p>
+
 ## Tumbar la Red
 
 Sigues los mismos pasos de la parte anterior pero cambias a la opcion de "Tumbar la red", automáticamente comenzará el ataque Dos a la red wifi seleccionada.
