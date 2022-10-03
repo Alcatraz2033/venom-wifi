@@ -53,6 +53,26 @@ ${CYAN}    ██   ██ ██   ██ ██   ████ █████
 	EOF
 }
 
+wifi_banner() {
+	cat <<- EOF
+	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+${GREEN}	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⠃⠀⠀⠀⠀⠀⠀⠰⣶⡀⠀⠀
+${GREEN}	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⣴⠇⠀⠀⠀⠀⠸⣦⠈⢿⡄⠀
+${GREEN}	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⢸⡏⢰⡇⠀⠀⢸⡆⢸⡆⢸⡇⠀ 
+${GREEN}	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇⠘⣧⡈⠃⢰⡆⠘⢁⣼⠁⣸⡇⠀ 
+${GREEN}	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣄⠘⠃⠀⢸⡇⠀⠘⠁⣰⡟⠀⠀${RED}Handshake Capturado:${CYAN} $red_name
+${GREEN}	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠃⠀⠀⢸⡇⠀⠀⠘⠋⠀⠀⠀
+${GREEN}	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀
+${GREEN}	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀
+${GREEN}	⠀⠀By: Alcatraz2033⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀
+${GREEN}	⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀
+${GREEN}	⠀⢸⣿⣟⠉⢻⡟⠉⢻⡟⠉⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀
+${GREEN}	⠀⢸⣿⣿⣷⣿⣿⣶⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀
+${GREEN}	⠀⠈⠉⠉⢉⣉⣉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⣉⣉⡉⠉⠉⠁⠀
+${GREEN}	⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉ ${END}⠀⠀⠀⠀
+	EOF
+}
+
 function cheker(){
 
 	which aircrack-ng &>/dev/null
@@ -65,6 +85,29 @@ function cheker(){
 		echo -e "\n${CYAN}[+] Instalando xterm...${endColour}"
 		sudo apt install xterm -y &>/dev/null
 	fi 
+}
+
+function hand_checker(){
+	while true; do
+		len=$(ls -la | awk '/captura-01.cap/{print $5}')
+		if [ ${#len} -eq 6 ];then
+			pkill xterm
+			clear; wifi_banner
+
+		    echo -e "${RED}\n[!] Saliendo...${END}"
+		    rm redes* captura-01.csv captura-01.kismet.csv captura-01.kismet.netxml captura-01.log.csv mac_users.txt  2>/dev/null 
+			mv captura-01.cap "$red_name.cap" &>/dev/null
+			mv "$red_name.cap" capturas  &>/dev/null
+			rm "$red_name.cap" &>/dev/null 
+		    mon=$(networkctl 2>/dev/null |  awk '{print $(NF-3)}' 2>/dev/null)
+		    mon_comprobation=$(echo $mon | grep "mon")
+		    if [ $? == "0" ];then
+		        reverse 2>/dev/null 
+		    fi 
+		    exit 1
+
+		fi
+	done	
 }
 
 clear 
@@ -125,6 +168,7 @@ select ataque in $opt;do
 		            sleep 4
 		            pid=$(pidof xterm | awk '{print $1}') &>/dev/null
 		            kill -9 $pid &>/dev/null
+		            hand_checker
 		        done 
 		    fi 
 		done 2>/dev/null
