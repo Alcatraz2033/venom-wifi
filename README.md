@@ -31,7 +31,7 @@ sudo ./handshake.sh
 Selecciona la opcion que prefieras, puedes elejir entre atacar directamente la red o crackear la contraseña por fuerza bruta con ataque por diccionario. (Muy pronto se añadira el ataque Evil Twin)
 
 <p align="left">
-	<img src="https://i.imgur.com/ejO41lO.png" width="60%" height="60%" align="">
+	<img src="https://i.imgur.com/G4BeXny.png" width="60%" height="60%" align="">
 </p>
 
 ## Obterner Handshake
@@ -41,21 +41,21 @@ terminal xterm y luego preciona ctrl + C. La detección de red finalizará y pod
 Despues aparecerá el listado de redes disponibles, selecionas la que gustes y empieza el ataque.
 
 <p align="center">
-	<img src="https://i.imgur.com/nLhsEML.png" width="100%" height="100%" align="">
+	<img src="blob:https://imgur.com/154e4a15-7971-42eb-8b65-26a33707a260" width="100%" height="100%" align="">
 </p>
 
 ## Resultado Final
 
 Una vez obtenido el handshake, el programa automaticamente se serrará y guardará el archivo.cap en la carpeta capturas con el nombre de la red comprometida.
 <p align="center">
-	<img src="https://i.imgur.com/HUN7fOR.png" width="100%" height="100%" align="">
+	<img src="blob:https://imgur.com/5cf7e2bb-c04b-40f7-8e4a-3890544fb81b" width="100%" height="100%" align="">
 </p>
 
-## Resultado Final
+## Crackeo de Contraseña
 
 Crackeo de contraseña por fuerza bruta con ataque de diccionario, escoje entre el diccionario por defecto o selecciona tu porpio diccioanrio de contraseñas.
 <p align="center">
-	<img src="https://i.imgur.com/RotfS8s.png" width="100%" height="100%" align="">
+	<img src="https://i.imgur.com/HEQAWxi.png" width="100%" height="100%" align="">
 </p>
 
 ## Tumbar la Red
@@ -65,5 +65,5 @@ Para detener el ataque preciona ctrl + C en la terminal principal.
 
 
 <p align="center">
-	<img src="https://i.imgur.com/jQ3srbW.png" width="100%" height="100%" align="">
+	<img src="https://i.imgur.com/dStEmWc.png" width="100%" height="100%" align="">
 </p>
