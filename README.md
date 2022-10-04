@@ -41,14 +41,14 @@ terminal xterm y luego preciona ctrl + C. La detección de red finalizará y pod
 Despues aparecerá el listado de redes disponibles, selecionas la que gustes y empieza el ataque.
 
 <p align="center">
-	<img src="blob:https://imgur.com/154e4a15-7971-42eb-8b65-26a33707a260" width="100%" height="100%" align="">
+	<img src="https://i.imgur.com/xPt2Psi.png" width="100%" height="100%" align="">
 </p>
 
 ## Resultado Final
 
 Una vez obtenido el handshake, el programa automaticamente se serrará y guardará el archivo.cap en la carpeta capturas con el nombre de la red comprometida.
 <p align="center">
-	<img src="blob:https://imgur.com/5cf7e2bb-c04b-40f7-8e4a-3890544fb81b" width="100%" height="100%" align="">
+	<img src="https://i.imgur.com/4xLFWjz.png" width="100%" height="100%" align="">
 </p>
 
 ## Crackeo de Contraseña
