@@ -6,6 +6,15 @@ la comunicación (tu conexión a internet). Este con el handshake obtenido se pu
 tiene la función para tumbar una red wifi por completo sin necesidad de autenticación "Muy útil si lo que quieres es jugar una pequeña broma" pero
 recuerda que si tumbas la red por mas de 5 horas, podrias dañar el router al que estas atacando. 
 
+## Recomendación
+
+Antes de iniciar se recomienda para esta clase de ataques a redes wifi, obtener una antena wifi rompemuros. La más popular en el mundo del pentesting es 
+la antena de marca ALFA o antenas con un chipset Ralink.
+
+<p align="left">
+	<img src="https://i.imgur.com/wE0eG8t.jpg" width="30%" height="30%">
+</p>
+
 ### Instalación
 
 Clonar el repositorio y cambiar los permisos
