@@ -1,4 +1,4 @@
-## Bienvenido a Auto Handshake
+## Bienvenido a Venom-Wifi
 
 Este es un script que automatiza la obtención del wpa handshake.  Cuando un usuario se conecta a una red wifi ocurre lo que se conoce como 4-way
 handshake, este proceso transmite 4 mensajes para poder confirmar que ambos el usuario y el router tienen las credenciales correctas para empezar 
