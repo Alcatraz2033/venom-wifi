@@ -31,7 +31,7 @@ sudo ./venom-wifi.sh
 Selecciona la opcion que prefieras, puedes elejir entre atacar directamente la red o crackear la contraseña por fuerza bruta con ataque por diccionario. (Muy pronto se añadira el ataque Evil Twin)
 
 <p align="left">
-	<img src="https://i.imgur.com/G4BeXny.png" width="60%" height="60%" align="">
+	<img src="https://i.imgur.com/PB6TxQ7.png" width="60%" height="60%" align="">
 </p>
 
 ## Obterner Handshake
