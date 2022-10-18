@@ -1,7 +1,5 @@
 ## Bienvenido a Venom-Wifi
 
-##
-
 <h3><p align="center">Advertencia</p></h3>
 
 Cualquier acción o actividad relacionada con Venom-Wifi es de su exclusiva responsabilidad. El uso indebido de este conjunto de herramientas puede dar lugar a cargos penales contra las personas en cuestión. Los contribuyentes no serán responsables en caso de que se presenten cargos penales contra cualquier persona que haga un uso indebido de este conjunto de herramientas para infringir la ley.
