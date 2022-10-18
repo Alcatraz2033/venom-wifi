@@ -8,7 +8,7 @@ Este conjunto de herramientas contiene materiales que pueden ser potencialmente 
 
 Esta herramienta está hecha solo con fines educativos. No intente violar la ley con nada de lo contenido aquí. Si esta es tu intención, entonces ¡Vete de aquí!
 
-Solo demuestra "cómo funciona el phishing". No debe hacer un mal uso de la información para obtener acceso no autorizado a las redes sociales de otra persona. Sin embargo, puede probar esto bajo su propio riesgo.
+Solo demuestra "cómo funciona el pentesteo de redes wifi". No debe hacer un mal uso de la información para obtener acceso no autorizado a las redes wifi de otra persona. Sin embargo, puede probar esto bajo su propio riesgo.
 
 ##
 
