@@ -1,10 +1,25 @@
 ## Bienvenido a Venom-Wifi
 
+##
+
+<h3><p align="center">Advertencia</p></h3>
+
+Cualquier acción o actividad relacionada con Venom-Wifi es de su exclusiva responsabilidad. El uso indebido de este conjunto de herramientas puede dar lugar a cargos penales contra las personas en cuestión. Los contribuyentes no serán responsables en caso de que se presenten cargos penales contra cualquier persona que haga un uso indebido de este conjunto de herramientas para infringir la ley.
+
+Este conjunto de herramientas contiene materiales que pueden ser potencialmente dañinos o peligrosos para las redes sociales. Consulte las leyes de su provincia/país antes de acceder, usar o de cualquier otra forma utilizar esto de manera incorrecta.
+
+Esta herramienta está hecha solo con fines educativos. No intente violar la ley con nada de lo contenido aquí. Si esta es tu intención, entonces ¡Vete de aquí!
+
+Solo demuestra "cómo funciona el phishing". No debe hacer un mal uso de la información para obtener acceso no autorizado a las redes sociales de otra persona. Sin embargo, puede probar esto bajo su propio riesgo.
+
+##
+
 Este es un script que automatiza la obtención del wpa handshake.  Cuando un usuario se conecta a una red wifi ocurre lo que se conoce como 4-way
 handshake, este proceso transmite 4 mensajes para poder confirmar que ambos el usuario y el router tienen las credenciales correctas para empezar 
 la comunicación (tu conexión a internet). Este con el handshake obtenido se puede crakear la contraseña mediante fuerza bruta. Además este script
 tiene la función para tumbar una red wifi por completo sin necesidad de autenticación "Muy útil si lo que quieres es jugar una pequeña broma" pero
 recuerda que si tumbas la red por mas de 5 horas, podrias dañar el router al que estas atacando. 
+##
 
 ## Recomendación
 
