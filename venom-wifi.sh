@@ -106,8 +106,8 @@ function cheker(){
 
 function hand_checker(){
 	while true; do
-		len=$(ls -la | awk '/captura-01.cap/{print $5}')
-		if [ ${#len} -eq 6 ];then
+		aircrack-ng "captura-01.cap" | awk '{print $4}' | tr -s '\n' | grep 'Unknown' &>/dev/null
+		if [ $? != 0 ];then
 			pkill xterm
 			clear; wifi_banner
 			move_file
@@ -149,7 +149,8 @@ menu_dicitionary_crack(){
 	select cap in $(ls capturas);do
 		large=$(ls -la capturas | grep $cap | awk '{print $5}')
 		cap_name=$(echo $cap | sed 's/.cap//g')
-		if [ ${#large} -eq 6 ];then
+		aircrack-ng "$cap_name.cap" | awk '{print $4}' | tr -s '\n' | grep 'Unknown' &>/dev/null
+		if [ $? != 0 ];then
 			aircrack-ng "capturas/$cap_name.cap" -J "capturas/$cap_name" &>/dev/null
 			hccap2john "capturas/$cap_name.hccap" > "capturas/$cap_name.txt"
 			rm capturas/*.hccap
