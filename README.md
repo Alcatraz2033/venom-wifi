@@ -35,7 +35,6 @@ Clonar el repositorio y cambiar los permisos
 ```markdown
 git clone https://github.com/Alcatraz2033/venom-wifi.git
 cd venom-wifi
-chmod +x venom-wifi.sh
 sudo ./venom-wifi.sh
 ```
 
