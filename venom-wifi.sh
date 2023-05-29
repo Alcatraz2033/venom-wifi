@@ -106,7 +106,7 @@ function cheker(){
 
 function hand_checker(){
 	while true; do
-		aircrack-ng "captura-01.cap" | awk '{print $4}' | tr -s '\n' | grep 'Unknown' &>/dev/null
+		aircrack-ng "captura-01.cap" | grep "1 handshake" &>/dev/null
 		if [ $? != 0 ];then
 			pkill xterm
 			clear; wifi_banner
