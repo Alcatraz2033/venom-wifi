@@ -96,9 +96,10 @@ function cheker(){
 		echo -e "\n[+]${CYAN} Instalando git...${END}"
 		sudo apt install git -y &>/dev/null
 	fi
-	if [ ! -d "SecLists" ];then
+ 	which seclists &>/dev/null
+	if [ $? -ne "0" ];then
 		echo -e "\n[+]${CYAN} Descargando SecLists, esto puede demorar un poco...${END}"
-		git clone https://github.com/danielmiessler/SecLists.git 
+		sudo apt install seclists -y &>/dev/null
 	fi 
 	clear
 	banner
@@ -157,8 +158,8 @@ menu_dicitionary_crack(){
 			echo -e "\n${WHITE}[+] ${GREEN}Escoja una opcion:${END}"
 			select j in 'Utilizar diccionario automatico' 'Utilizar diciconario propio';do
 				if [[ $j == 'Utilizar diccionario automatico' ]];then
-					for elemento in $(ls SecLists/Passwords/WiFi-WPA/);do
-						jhon_process=$(john --wordlist=SecLists/Passwords/WiFi-WPA/$elemento "capturas/$cap_name.txt")
+					for elemento in $(ls /usr/share/seclists/Passwords/WiFi-WPA/);do
+						jhon_process=$(john --wordlist=/usr/share/seclists/Passwords/WiFi-WPA/$elemento "capturas/$cap_name.txt")
 						echo $jhon_process | grep "No password hashes left to crack" &>/dev/null
 						if [ $? -eq 0 ];then
 							pass=$(john --show capturas/$cap_name.txt | head -n1 | awk -F ":" 'BEGIN{FS=":";OFS=" -> "} {print $1,$2}')
